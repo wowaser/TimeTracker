@@ -2,7 +2,7 @@
 #include "ui_mainwindow.h"
 #include "hour.h"
 #include "hour_group.h"
-#include "colorbutton.h"
+
 
 
 const QString def_button_border = "#878391";
@@ -11,8 +11,6 @@ const char file_sep = ';';
 const QString btnHoverPressed_txt = "QPushButton:hover{border:1px solid #00bbff}\n"
                                     "QPushButton:pressed{border-style:solid;border-color: #00bbff; "
                                     "border-width:3px}\n";
-
-QT_CHARTS_USE_NAMESPACE
 
 /*
  * TODO:
@@ -57,24 +55,26 @@ MainWindow::MainWindow(QWidget *parent)
     statusBar()->hide();
 
     ui->selected_button->setDisabled(true);
+    //  Connecting selected color button to a variable "selected_color"
+    connect(ui->selected_button, SIGNAL(selected_clr_changed(QColor&)), this, SLOT(selectColor(QColor&)));
+    //  Setting the default color of the selected "button".
 
-    cur_btn = ui->sleep_button;
-    select_color(cur_btn);
+    selected_clr = allButtons[0]->palette().button().color();
+    allButtons[0]->pressed(selected_clr);
+
+
 
     create_pieChart();
-
-    ColorButton* cb = new ColorButton;
-
-    cb->setParent(ui->page_4);
-    cb->setText("xDDDD");
-
-    cb->move(200,200);
 
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::selectColor(QColor &clr){
+    selected_clr = clr;
 }
 
 void MainWindow::create_hours(QGraphicsScene* scene, QMap<int, hour*>& mapp){
@@ -310,23 +310,26 @@ void MainWindow::add_click_animation(QWidget *btn){
     btn->setStyleSheet(btn_sSheet);
 }
 
+//  I don't like that one bit
 void MainWindow::loop_trough_btns(){
     for(auto child:ui->page_1->children()){
         QLabel* lbl = qobject_cast<QLabel*>(child);
         // if the object is label{...
         if(lbl != NULL){
             QString activity = lbl->text();
-            QWidget* bud_btn = lbl->buddy();
+            QWidget* wid_bud_btn = lbl->buddy();
+            ColorButton*  bud_btn = qobject_cast<ColorButton*>(wid_bud_btn);
             if(bud_btn != nullptr){ // preventing pointer crashes
-
                 // addind border highlight to buttons
                 add_click_animation(bud_btn);
 
                 // fetching colors of buttons to store in struct dType for further creating of the piechart
-                QString btn_clr = bud_btn->palette().button().color().name();
-                dType log = {btn_clr, activity, 0};
+                QColor btn_clr = bud_btn->palette().button().color();
+                QString btn_clr_name = btn_clr.name();
+                dType log = {btn_clr_name, activity, 0};
                 pie_log.push_back(log);
-
+                connect(bud_btn, SIGNAL(pressed(QColor&)), ui->selected_button, SLOT(set_color(QColor&)));
+                allButtons.push_back(bud_btn);
             }
         }
     }
@@ -375,49 +378,6 @@ void MainWindow::on_scroll_button_clicked(){
     ui->stackedWidget->setCurrentIndex(1);
 }
 
-void MainWindow::on_sleep_button_clicked(){
-    select_color(ui->sleep_button);
-
-}
-
-void MainWindow::on_work_button_clicked(){
-    select_color(ui->work_button);
-
-}
-
-void MainWindow::on_school_button_clicked(){
-    select_color(ui->school_button);
-}
-
-void MainWindow::on_project_button_clicked(){
-    select_color(ui->project_button);
-}
-
-
-void MainWindow::on_sust_button_clicked(){
-    select_color(ui->sust_button);
-}
-
-void MainWindow::on_hobbies_button_clicked(){
-    select_color(ui->hobbies_button);
-}
-
-void MainWindow::on_social_button_clicked(){
-    select_color(ui->social_button);
-}
-
-void MainWindow::on_wasted_button_clicked(){
-    select_color(ui->wasted_button);
-}
-
-void MainWindow::select_color(QPushButton *btn){
-    selected_clr = btn->palette().button().color();
-
-    QPalette pal = ui->selected_button->palette();
-    pal.setColor(QPalette::Button, selected_clr);
-    ui->selected_button->setAutoFillBackground(true);
-    ui->selected_button->setPalette(pal);
-}
 
 void MainWindow::on_tot_anal_button_clicked(){
     ui->stackedWidget->setCurrentIndex(2);

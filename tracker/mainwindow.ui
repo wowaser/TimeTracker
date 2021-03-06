@@ -251,7 +251,7 @@ QPushButton:hover { background-color: #C3884A }</string>
          <string notr="true"/>
         </property>
         <property name="currentIndex">
-         <number>3</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="page_1">
          <property name="styleSheet">
@@ -263,8 +263,8 @@ QPushButton:hover { background-color: #C3884A }</string>
             <property name="horizontalSpacing">
              <number>0</number>
             </property>
-            <item row="1" column="4">
-             <layout class="QVBoxLayout" name="button_option7" stretch="20,5">
+            <item row="1" column="5">
+             <layout class="QVBoxLayout" name="button_option8" stretch="4,1">
               <property name="spacing">
                <number>0</number>
               </property>
@@ -278,7 +278,7 @@ QPushButton:hover { background-color: #C3884A }</string>
                <number>40</number>
               </property>
               <item>
-               <widget class="QPushButton" name="project_button">
+               <widget class="ColorButton" name="hobbies_button">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -295,13 +295,13 @@ QPushButton:hover { background-color: #C3884A }</string>
                  <bool>false</bool>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">QPushButton {background-color:#85FCFF;
+                 <string notr="true">QPushButton {background-color:#24417C;
 border-style: solid;
 border-width: 2px;
 border-color:#878391}</string>
                 </property>
                 <property name="text">
-                 <string>My shit xdD</string>
+                 <string>Hobby</string>
                 </property>
                 <property name="flat">
                  <bool>true</bool>
@@ -309,7 +309,7 @@ border-color:#878391}</string>
                </widget>
               </item>
               <item>
-               <widget class="QLabel" name="project_label">
+               <widget class="QLabel" name="hobbies_label">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
                   <horstretch>0</horstretch>
@@ -329,13 +329,13 @@ border-color:#878391}</string>
                  </font>
                 </property>
                 <property name="text">
-                 <string>My projects</string>
+                 <string>Hobbies</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
                 </property>
                 <property name="buddy">
-                 <cstring>project_button</cstring>
+                 <cstring>hobbies_button</cstring>
                 </property>
                </widget>
               </item>
@@ -356,7 +356,7 @@ border-color:#878391}</string>
                <number>40</number>
               </property>
               <item>
-               <widget class="QPushButton" name="work_button">
+               <widget class="ColorButton" name="work_button">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -421,8 +421,8 @@ border-color:#878391}
               </item>
              </layout>
             </item>
-            <item row="0" column="4">
-             <layout class="QVBoxLayout" name="button_option3" stretch="20,5">
+            <item row="0" column="6">
+             <layout class="QVBoxLayout" name="button_option5" stretch="20,5">
               <property name="spacing">
                <number>0</number>
               </property>
@@ -436,7 +436,7 @@ border-color:#878391}
                <number>40</number>
               </property>
               <item>
-               <widget class="QPushButton" name="sleep_button">
+               <widget class="ColorButton" name="school_button">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -453,16 +453,13 @@ border-color:#878391}
                  <bool>false</bool>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">QPushButton {background-color:#ECE2E1;
+                 <string notr="true">QPushButton {background-color:#62F971;
 border-style: solid;
 border-width: 2px;
 border-color:#878391}</string>
                 </property>
                 <property name="text">
-                 <string>sleep</string>
-                </property>
-                <property name="checkable">
-                 <bool>false</bool>
+                 <string>school</string>
                 </property>
                 <property name="flat">
                  <bool>true</bool>
@@ -470,7 +467,7 @@ border-color:#878391}</string>
                </widget>
               </item>
               <item>
-               <widget class="QLabel" name="sleep_label">
+               <widget class="QLabel" name="school_label">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
                   <horstretch>0</horstretch>
@@ -490,177 +487,20 @@ border-color:#878391}</string>
                  </font>
                 </property>
                 <property name="text">
-                 <string>Sleep</string>
+                 <string>School</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
                 </property>
                 <property name="buddy">
-                 <cstring>sleep_button</cstring>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item row="1" column="5">
-             <layout class="QVBoxLayout" name="button_option8" stretch="4,1">
-              <property name="spacing">
-               <number>0</number>
-              </property>
-              <property name="sizeConstraint">
-               <enum>QLayout::SetMaximumSize</enum>
-              </property>
-              <property name="leftMargin">
-               <number>40</number>
-              </property>
-              <property name="rightMargin">
-               <number>40</number>
-              </property>
-              <item>
-               <widget class="QPushButton" name="hobbies_button">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="autoFillBackground">
-                 <bool>false</bool>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">QPushButton {background-color:#24417C;
-border-style: solid;
-border-width: 2px;
-border-color:#878391}</string>
-                </property>
-                <property name="text">
-                 <string>Hobby</string>
-                </property>
-                <property name="flat">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="hobbies_label">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>20</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>Segoe UI</family>
-                  <pointsize>10</pointsize>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>Hobbies</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-                <property name="buddy">
-                 <cstring>hobbies_button</cstring>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item row="0" column="5">
-             <layout class="QVBoxLayout" name="button_option4" stretch="20,5">
-              <property name="spacing">
-               <number>0</number>
-              </property>
-              <property name="sizeConstraint">
-               <enum>QLayout::SetMaximumSize</enum>
-              </property>
-              <property name="leftMargin">
-               <number>40</number>
-              </property>
-              <property name="rightMargin">
-               <number>40</number>
-              </property>
-              <item>
-               <widget class="QPushButton" name="sust_button">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="autoFillBackground">
-                 <bool>false</bool>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">QPushButton {background-color:#F9F062;
-border-style: solid;
-border-width: 2px;
-border-color:#878391}</string>
-                </property>
-                <property name="text">
-                 <string>sust</string>
-                </property>
-                <property name="flat">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="sust_label">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>20</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="font">
-                 <font>
-                  <family>Segoe UI</family>
-                  <pointsize>10</pointsize>
-                  <kerning>true</kerning>
-                 </font>
-                </property>
-                <property name="text">
-                 <string>Sustanance</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-                <property name="buddy">
-                 <cstring>sust_button</cstring>
+                 <cstring>school_button</cstring>
                 </property>
                </widget>
               </item>
              </layout>
             </item>
             <item row="1" column="6">
-             <layout class="QVBoxLayout" name="button_option1" stretch="20,5">
+             <layout class="QVBoxLayout" name="button_option7" stretch="20,5">
               <property name="spacing">
                <number>0</number>
               </property>
@@ -674,7 +514,7 @@ border-color:#878391}</string>
                <number>40</number>
               </property>
               <item>
-               <widget class="QPushButton" name="social_button">
+               <widget class="ColorButton" name="social_button">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -752,7 +592,7 @@ border-color:#878391}</string>
                <number>40</number>
               </property>
               <item>
-               <widget class="QPushButton" name="wasted_button">
+               <widget class="ColorButton" name="wasted_button">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -815,8 +655,8 @@ border-color:#878391}</string>
               </item>
              </layout>
             </item>
-            <item row="0" column="6">
-             <layout class="QVBoxLayout" name="button_option5" stretch="20,5">
+            <item row="1" column="4">
+             <layout class="QVBoxLayout" name="button_option7_2" stretch="20,5">
               <property name="spacing">
                <number>0</number>
               </property>
@@ -830,7 +670,7 @@ border-color:#878391}</string>
                <number>40</number>
               </property>
               <item>
-               <widget class="QPushButton" name="school_button">
+               <widget class="ColorButton" name="project_button">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -847,13 +687,13 @@ border-color:#878391}</string>
                  <bool>false</bool>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">QPushButton {background-color:#62F971;
+                 <string notr="true">QPushButton {background-color:#85FCFF;
 border-style: solid;
 border-width: 2px;
 border-color:#878391}</string>
                 </property>
                 <property name="text">
-                 <string>school</string>
+                 <string>My shit xdD</string>
                 </property>
                 <property name="flat">
                  <bool>true</bool>
@@ -861,7 +701,7 @@ border-color:#878391}</string>
                </widget>
               </item>
               <item>
-               <widget class="QLabel" name="school_label">
+               <widget class="QLabel" name="project_label">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
                   <horstretch>0</horstretch>
@@ -881,13 +721,92 @@ border-color:#878391}</string>
                  </font>
                 </property>
                 <property name="text">
-                 <string>School</string>
+                 <string>My projects</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
                 </property>
                 <property name="buddy">
-                 <cstring>school_button</cstring>
+                 <cstring>project_button</cstring>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="0" column="5">
+             <layout class="QVBoxLayout" name="button_option4" stretch="20,5">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="sizeConstraint">
+               <enum>QLayout::SetMaximumSize</enum>
+              </property>
+              <property name="leftMargin">
+               <number>40</number>
+              </property>
+              <property name="rightMargin">
+               <number>40</number>
+              </property>
+              <item>
+               <widget class="ColorButton" name="sust_button">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="autoFillBackground">
+                 <bool>false</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {background-color:#F9F062;
+border-style: solid;
+border-width: 2px;
+border-color:#878391}</string>
+                </property>
+                <property name="text">
+                 <string>sust</string>
+                </property>
+                <property name="flat">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="sust_label">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>20</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Segoe UI</family>
+                  <pointsize>10</pointsize>
+                  <kerning>true</kerning>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Sustanance</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="buddy">
+                 <cstring>sust_button</cstring>
                 </property>
                </widget>
               </item>
@@ -896,7 +815,7 @@ border-color:#878391}</string>
             <item row="0" column="0" rowspan="2">
              <layout class="QVBoxLayout" name="selectedClr_layout" stretch="50,5">
               <item>
-               <widget class="QPushButton" name="selected_button">
+               <widget class="ColorButton" name="selected_button">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -936,6 +855,87 @@ border-color:#878391;}</string>
                 </property>
                 <property name="text">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Selected activity&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="0" column="4">
+             <layout class="QVBoxLayout" name="button_option1" stretch="20,5">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="sizeConstraint">
+               <enum>QLayout::SetMaximumSize</enum>
+              </property>
+              <property name="leftMargin">
+               <number>40</number>
+              </property>
+              <property name="rightMargin">
+               <number>40</number>
+              </property>
+              <item>
+               <widget class="ColorButton" name="sleep_button">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="autoFillBackground">
+                 <bool>false</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {background-color:#ECE2E1;
+border-style: solid;
+border-width: 2px;
+border-color:#878391}</string>
+                </property>
+                <property name="text">
+                 <string>sleep</string>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+                <property name="flat">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="sleep_label">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>20</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Segoe UI</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Sleep</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="buddy">
+                 <cstring>sleep_button</cstring>
                 </property>
                </widget>
               </item>
@@ -1079,6 +1079,11 @@ border-color:#878391;}</string>
    <class>QChartView</class>
    <extends>QGraphicsView</extends>
    <header>QtCharts</header>
+  </customwidget>
+  <customwidget>
+   <class>ColorButton</class>
+   <extends>QPushButton</extends>
+   <header location="global">colorbutton.h</header>
   </customwidget>
  </customwidgets>
  <resources>

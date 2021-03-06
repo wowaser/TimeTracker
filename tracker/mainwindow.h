@@ -16,6 +16,7 @@
 #include <QChartView>
 #include <QtCharts/QPieSeries>
 #include <QtCharts/QPieSlice>
+#include "colorbutton.h"
 
 class hour;
 class hour_group;
@@ -29,23 +30,17 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
+
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
     QColor selected_clr;
 
-private slots:
-    //color choise buttons
-    void on_sleep_button_clicked();
-    void on_work_button_clicked();
-    void on_project_button_clicked();
-    void on_school_button_clicked();
-    void on_sust_button_clicked();
-    void on_hobbies_button_clicked();
-    void on_social_button_clicked();
-    void on_wasted_button_clicked();
+public slots:
+    void selectColor(QColor& clr);
 
+private slots:
     // side menu buttons
     void on_today_button_clicked();
     void on_yesterday_button_clicked();
@@ -87,7 +82,6 @@ private:
     QPushButton* prev_btn;
     QPushButton* cur_btn;
 
-    void select_color(QPushButton* btn);
     void parse_file();
     void process_dayLine(QStringList& line, bool isToday = false, bool isYesterday = false);
     void paint_day(QMap<int, hour*>& mapped_day, QStringList& split_line);
@@ -99,6 +93,7 @@ private:
 
     void add_click_animation(QWidget* btn);
     void loop_trough_btns();
+    QVector<ColorButton*> allButtons;
 
     QFile file{"C:/Users/fofa/qt_projects/time_tracker/data.txt"};
 
