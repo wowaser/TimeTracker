@@ -383,7 +383,3 @@ void MainWindow::on_tot_anal_button_clicked(){
     ui->stackedWidget->setCurrentIndex(2);
 }
 
-
-void MainWindow::on_testButton_clicked(){
-    ui->stackedWidget->setCurrentIndex(3);
-}

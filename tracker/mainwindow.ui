@@ -210,7 +210,7 @@ QPushButton:hover { background-color: #C3884A }</string>
          </sizepolicy>
         </property>
         <property name="styleSheet">
-         <string notr="true">QPushButton {background-color: rgb(40,88,88);
+         <string notr="true">QPushButton {background-color: rgb(200,88,88);
 					    border-style:flat; border-radius:8px;
 						border-width:10px;
 border-color: gray}
@@ -218,19 +218,6 @@ QPushButton:hover { background-color: #C3884A }</string>
         </property>
         <property name="text">
          <string>total analytics</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="testButton">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="text">
-         <string>test_page</string>
         </property>
        </widget>
       </item>
@@ -1015,34 +1002,6 @@ border-color:#878391}</string>
    </layout>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1550</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <widget class="QMenu" name="menufile">
-    <property name="title">
-     <string>file</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuzhopa">
-    <property name="title">
-     <string>zhopa </string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menutype_here">
-    <property name="title">
-     <string>type here</string>
-    </property>
-   </widget>
-   <addaction name="menufile"/>
-   <addaction name="menuzhopa"/>
-   <addaction name="menutype_here"/>
-  </widget>
   <widget class="QToolBar" name="toolBar">
    <property name="windowTitle">
     <string>toolBar</string>
