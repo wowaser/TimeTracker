@@ -51,7 +51,6 @@ private slots:
     void save();
     void update_pie_chart(const QColor& clr, const QColor& prev_clr);
 
-    void on_testButton_clicked();
 
 private:
     Ui::MainWindow* ui;
